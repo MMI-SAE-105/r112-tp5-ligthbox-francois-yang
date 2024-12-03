@@ -6,7 +6,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    padding: 0;
+    margin: 0;
+    background: transparent;
 }
 
 #lightbox::before {
@@ -17,14 +19,14 @@
     display: flex; 
     align-items: center;
     justify-content: center;
-    width: 30px; 
-    height: 30px; 
-    background: rgba(236, 192, 125, 0.8); 
+    width: 25px; 
+    height: 25px; 
+    background: rgba(241, 173, 71, 0.8); 
     border-radius: 50%; 
     color: rgb(0, 0, 0); 
     font-weight: bold; 
     cursor: pointer; 
-    z-index: 10; 
+    z-index: 10px; 
     transition: background 0.3s ease; 
 }
 
@@ -33,10 +35,11 @@
 }
 
 #lightbox[open]{
-  background: #eadaa6db; /* Couleur de fond du contenu de la lightbox */
+  background: #eedda8db;
+  display: flex;
   border-radius: 10px;
   padding: 20px;
-  width: 40%;
+  width: 26%;
   max-width: 600px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
