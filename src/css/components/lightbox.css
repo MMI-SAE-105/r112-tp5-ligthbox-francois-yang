@@ -6,16 +6,34 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-   
+
 }
 
+#lightbox::before {
+    content: 'X'; 
+    position: absolute; 
+    top: 0px; 
+    right: 0px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 30px; 
+    height: 30px; 
+    background: rgba(236, 192, 125, 0.8); 
+    border-radius: 50%; 
+    color: rgb(0, 0, 0); 
+    font-weight: bold; 
+    cursor: pointer; 
+    z-index: 10; 
+    transition: background 0.3s ease; 
+}
 
 #lightbox::backdrop{
     background: rgba(196, 156, 82, 0.816)
 }
 
 #lightbox[open]{
-  background: #fff; /* Couleur de fond du contenu de la lightbox */
+  background: #eadaa6db; /* Couleur de fond du contenu de la lightbox */
   border-radius: 10px;
   padding: 20px;
   width: 40%;
