@@ -12,5 +12,13 @@ listThumbnail.forEach((thumbnail) => {
     });
 });
 lightbox.addEventListener('click', (evt) => {
-    lightbox.close();
+    if (evt.target === lightbox || evt.target.closest('::before')) {
+        lightbox.classList.remove('ouvert');
+        lightbox.classList.add('ferme');
+        lightbox.addEventListener('animationend', function handleAnimationEnd() {
+            
+            lightbox.removeEventListener('animationend', handleAnimationEnd);
+            lightbox.close();
+        });
+    }
 });
